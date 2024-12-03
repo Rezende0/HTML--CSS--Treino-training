@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+:root {
+    --cortextpadrao: rgb(50, 50, 50);
+    --corlink: rgb(180, 255, 220);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(250, 250, 240);
+}

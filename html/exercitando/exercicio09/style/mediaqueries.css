@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/*
+Typlical Device Breakpoint 2024{
+    Extra small devices (phones, 600px and down);
+    Small devices (portrait tablets and large phones, 600px and up);
+    Medium devices (landscape tablets, 768px and up);
+    Large devices (laptops/desktops, 992px and up);
+    Extra large devices (large laptops and desktops, 1200px and up)
+}
+*/
+
+@media screen and (max-width: 767px) {
+    main::after {
+        color: white;
+        content: 'Você esta usando um celular ?';
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    main::after {
+        color: white;
+        content: 'Você esta usando um tablet ?';
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #cel {display: none;}
+    #tablet {display: block;}
+    #pc {display: none;}
+    #tv {display: none;}
+    #impressora {display: none;}
+
+}
+
+@media screen and (min-width: 992px) {
+
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    main::after {
+        color: white;
+        content: 'Você esta usando um pc ?';
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #cel {display: none;}
+    #tablet {display: none;}
+    #pc {display: block;}
+    #tv {display: none;}
+    #impressora {display: none;}
+
+}
+
+@media screen and (min-width: 1200px){
+
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main::after {
+        font-size: 2em;
+        color: white;
+        content: 'Você esta usando uma tv ?';
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    #cel {display: none;}
+    #tablet {display: none;}
+    #pc {display: none;}
+    #tv {display: block;}
+    #impressora {display: none;}
+
+}
+
+@media print {
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    h1 {
+        color: black;
+        text-shadow: none;
+    }
+
+    main::after {
+        content: 'Você está imprimindo';
+    }
+
+    #cel {display: none;}
+    #tablet {display: none;}
+    #pc {display: none;}
+    #tv {display: none;}
+    #impressora {display: block;}
+}
